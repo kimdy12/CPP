@@ -1,5 +1,6 @@
 # CPP
 프로그램 코드 1
+탈 것이 부모 클래스인 코드와 개인적인 실습습
 
     #include <iostream>
     #include <string>
@@ -37,89 +38,7 @@
     		cout << "현재 Cruise 탑승 인원은: " << Vehicle::getPerson() << endl;     // 부모클래스 호출
     	}
     	void countBaggage() {
-    		cout << "현재 Cruise 짐의 무게는: " << Vehicle::getBaggage() << endl; // 부모클래스 호출
-    	}
-    };
-    
-    class AirPlane :public Vehicle // Vehicle 클래스를 부모로 하는 클래스 AirPlane 정의
-    {
-    private:
-    	int seat; // private 멤버 변수 선언
-    public:
-    	void setSeat(int seat) { this->seat = seat; } // this 키워드로 멤버 변수 seat와 매개변수 seat을 구분
-    	void countPerson()    // 탑승인원 확인
-    	{
-    		cout << "현재 AirPlane 탑승 인원은: " << Vehicle::getPerson() << endl;     // 부모클래스 호출
-    	}
-    	void countBaggage() {
-    		cout << "현재 AirPlane 짐의 무게는: " << Vehicle::getBaggage() << endl; // 부모클래스 호출
-    	}
-    };
-    
-    int main(int argc, char const* argv[])
-    {
-    	Cruise dolphin; // Cruise 클래스의 객체 생성
-    	dolphin.ride();    // 부모클래스 멤버함수  접근
-    	dolphin.load(10);  // 부모클래스 멤버함수  접근
-    	dolphin.countPerson();     // 자식클래스 멤버함수 호출
-    	dolphin.countBaggage(); // 자식클래스 멤버함수 호출
-    
-    	AirPlane cppAir; // AirPlane 클래스의 객체 생성
-    	cppAir.ride();    // 부모클래스의 멤버함수 접근
-    	cppAir.load(20);  // 부모클래스 멤버함수  접근 
-    	cppAir.countPerson();     // 자식클래스 멤버함수 호출
-    	cppAir.countBaggage(); // 자식클래스 멤버함수 호출
-    
-    	return 0;
-    }
-
-프로그램 코드 2
-
-    #include <iostream>
-    #include <string>
-    using namespace std;
-    
-    class Base {
-    private:
-    	int a = 0; // private 멤버 변수 선언
-    public:
-    	int b = 0; // public 멤버 변수 선언
-    protected:
-    	int c = 0; // protected 멤버 변수 선언
-    };
-    
-    class Derived1 :private Base { // Base를 private로 상속 받는 클래스 Derived1 정의
-    public:
-    	void show() { cout << a << ", " << b << ", " << c << endl; } // a는 private. 액세스 불가
-    };
-    
-    class Derived2 :public Base{ // Base를 public로 상속 받는 클래스 Derived2 정의
-    public:
-    	void show() { cout << a << ", " << b << ", " << c << endl; } // a는 private. 액세스 불가
-    };
-    
-    class Derived3 :protected Base{ // Base를 protected로 상속 받는 클래스 Derived3 정의
-    public:
-    	void show() { cout << a << ", " << b << ", " << c << endl; } // a는 private. 액세스 불가
-    };
-    
-    int main()
-    {
-    	Base d0; // Base의 객체 생성
-    	Derived1 d1; // Derived1의 객체 생성
-    	Derived2 d2; // Derived2의 객체 생성
-    	Derived3 d3; // Derived3의 객체 생성
-    
-    	d0.a = 1;
-    	d0.b = 1;
-    	d0.c = 1;
-    
-    	d1.show();
-    	d2.show();
-    	d3.show();
-    }
-
-프로그램 코드 3
+    		cout << "현재 Cruise 짐의인 실습
 
     #include <iostream>
     #include <string>
@@ -172,6 +91,7 @@
     }
 
 프로그램 코드 4
+다중 상속 코드 실습
 
     #include <iostream>
     #include <string>
@@ -261,6 +181,7 @@
     }
 
 과제 외 프로그램
+다중 상속을 받는 클래스들을 직접 선언, 정의해보기
 
     #include <iostream>
     #include <string>
