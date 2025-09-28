@@ -1,6 +1,7 @@
 # CPP
 프로그램 코드 1
-탈 것이 부모 클래스인 코드와 개인적인 실습습
+
+탈 것이 부모 클래스인 코드와 개인적인 실습
 
     #include <iostream>
     #include <string>
