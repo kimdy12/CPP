@@ -1,21 +1,21 @@
 프로그램 실습 1번
 
-  #include <iostream>
-  #include <vector>
-  #include <algorithm>
-  
-  using namespace std;
-  
-  int main()
-  {  
-      vector <int> v1;
-  
-      for (int i = 0; i < 10; i++) {
-          v1.push_back(10);
-  		cout << "size: " << v1.size() << " ";
-          cout << "capacity: " << v1.capacity() << endl;
-      }
-  }
+    #include <iostream>
+    #include <vector>
+    #include <algorithm>
+    
+    using namespace std;
+    
+    int main()
+    {  
+        vector <int> v1;
+    
+        for (int i = 0; i < 10; i++) {
+            v1.push_back(10);
+    		cout << "size: " << v1.size() << " ";
+            cout << "capacity: " << v1.capacity() << endl;
+        }
+    }
 
 프로그램 실습 2번
   int main()
